@@ -1,0 +1,9 @@
+# Untrack folders
+
+node_modules/
+package-lock.json
+design/
+README-template.md
+README.md
+style-guide.md
+textforhtml.txt
