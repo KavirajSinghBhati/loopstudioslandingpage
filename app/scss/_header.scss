@@ -83,6 +83,7 @@
     }
     &--hamburger,
     &--exit-btn {
+      cursor: pointer;
       @include breakpoint(medium) {
         display: none;
       }
