@@ -43,8 +43,12 @@
           }
 
           a {
+            padding: 2px;
             @include breakpoint(medium) {
               margin-right: 20px;
+            }
+            &:hover {
+              border-bottom: 1px solid #fff;
             }
           }
           .last {
@@ -55,7 +59,7 @@
         }
 
         .logo {
-          margin-bottom: 200px;
+          margin-bottom: 100px;
           @include breakpoint(medium) {
             display: none;
           }
@@ -64,15 +68,17 @@
         .nav-links {
           a {
             font-family: $josefinSansFont;
-            font-size: 2.5rem;
+            font-size: 36px;
+            text-transform: uppercase;
 
             @include breakpoint(medium) {
               font-family: $alataFont;
               font-size: 0.875rem;
+              text-transform: initial;
             }
 
             li {
-              margin-bottom: 56px;
+              margin-bottom: 30px;
               @include breakpoint(medium) {
                 margin-bottom: 0px;
               }
@@ -81,13 +87,44 @@
         }
       }
     }
-    &--hamburger,
-    &--exit-btn {
-      cursor: pointer;
+
+    &-content {
+      margin-top: 200px;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      padding: 32px 36px;
+
       @include breakpoint(medium) {
-        display: none;
+        max-width: 450px;
+        margin-top: 126px;
+      }
+
+      @include breakpoint(large) {
+        max-width: 650px;
+      }
+
+      h1 {
+        font-family: $josefinSansFont;
+        color: #fff;
+        font-weight: 300;
+
+        .down-text {
+          display: block;
+
+          @include breakpoint(large) {
+            display: initial;
+          }
+        }
       }
     }
+  }
+}
+
+.menu-btn,
+.exit-btn {
+  cursor: pointer;
+  @include breakpoint(medium) {
+    display: none;
   }
 }
 
