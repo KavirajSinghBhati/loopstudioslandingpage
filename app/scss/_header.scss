@@ -15,6 +15,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 10px;
 
       ul {
         position: fixed;
@@ -44,11 +45,26 @@
 
           a {
             padding: 2px;
+            position: relative;
             @include breakpoint(medium) {
               margin-right: 20px;
             }
-            &:hover {
-              border-bottom: 1px solid #fff;
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 2px;
+              width: 50%;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              bottom: -10px;
+              background: #fff;
+              opacity: 0;
+              transition: opacity 300ms ease-in-out;
+            }
+            &:hover::before {
+              opacity: 1;
             }
           }
           .last {
