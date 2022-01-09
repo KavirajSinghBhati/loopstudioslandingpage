@@ -1,4 +1,46 @@
 .footer {
   background: #000;
   color: #fff;
+  text-align: center;
+  &__info {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &-logo {
+      margin-bottom: 44px;
+    }
+    &-links {
+      .nav-links {
+        display: grid;
+        gap: 26px;
+
+        a {
+          position: relative;
+          padding: 2px;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 50%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            background: #fff;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+          }
+        }
+      }
+    }
+    &-copyright {
+      margin-top: 56px;
+      font-family: $josefinSansFont;
+      color: $veryDarkGrey;
+    }
+  }
 }
