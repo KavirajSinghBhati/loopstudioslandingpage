@@ -12,7 +12,7 @@
       margin-bottom: 44px;
     }
     &-links {
-      .nav-links {
+      .footer-links {
         display: grid;
         gap: 26px;
 
@@ -25,16 +25,31 @@
             display: block;
             position: absolute;
             height: 2px;
-            width: 50%;
+            width: 20px;
             margin: 0 auto;
             left: 0;
             right: 0;
-            bottom: -10px;
+            bottom: -8px;
             background: #fff;
             opacity: 0;
             transition: opacity 300ms ease-in-out;
           }
+          &:hover::before {
+            opacity: 1;
+          }
         }
+      }
+    }
+
+    &-socials {
+      margin-top: 54px;
+
+      i {
+        cursor: pointer;
+      }
+
+      i:not(:last-child) {
+        margin-right: 20px;
       }
     }
     &-copyright {
